@@ -67,7 +67,7 @@ public class TicketServiceImpl implements TicketService {
 	
 	private int getAvailableSeatsInVenueLevel(Theatre theatre){
 		List<ReservedSeats> seatsReserved = reservedSeatsRepository.findByVenue(theatre);
-		int numberOfSeatTaken = reservedSeats.getNumberOfSeats();
+		int numberOfSeatTaken = seatsReserved.stream().mapToInt(ReservedSeats::getNumberOfSeats).sum();
 		int totalNumberOfSeat = theatre.getNumberOfRow() * theatre.getSeatsInRow();
 		return totalNumberOfSeat - numberOfSeatTaken;
 		

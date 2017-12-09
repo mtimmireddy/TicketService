@@ -30,6 +30,8 @@ import com.myapp.service.TicketService;
 @Configuration
 public class ServiceImplTestConfig {
 	
+	public static final Long SEAT_HOLD_EXPIRATION_TIME_IN_SECONDS	= 120L;	
+	
 	@Bean
 	public SeatHoldTime seatHoldTime() {
 		return new SeatHoldTime(Long.valueOf("120"));
