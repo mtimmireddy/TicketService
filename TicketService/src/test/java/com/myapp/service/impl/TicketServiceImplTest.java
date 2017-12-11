@@ -60,7 +60,7 @@ public class TicketServiceImplTest {
 
 	/**
 	 * Test for checking reserveSeats
-	 * Mocked repositories has customer for email homer@simpson.com and SeatHoldId = 11
+	 * Mocked repositories has customer for email jenny@gmail.com.com and SeatHoldId = 11
 	 */
 	@Test
 	public void testReserveSeats() {
